@@ -9,6 +9,7 @@ function App() {
   });
   const [data, setData] = useState({
     array: [],
+    uselessValue: null,
   });
 
   const onChange = useCallback((e) => {
