@@ -45,6 +45,8 @@ const store = createStore(reducer, initialState);
 const render = () => {
   const state = store.getState();
 
+  console.log(state);
+
   if (state.toggle) {
     divToggle.classList.add("active");
   } else {

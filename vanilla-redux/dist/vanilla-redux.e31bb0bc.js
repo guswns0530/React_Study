@@ -982,6 +982,7 @@ var store = (0, _redux.legacy_createStore)(reducer, initialState);
 
 var render = function render() {
   var state = store.getState();
+  console.log(state);
 
   if (state.toggle) {
     divToggle.classList.add("active");
@@ -1031,7 +1032,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4224" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4404" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
