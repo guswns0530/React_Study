@@ -30,13 +30,16 @@ const initialState = {
 // }
 
 // redux-action 사용후
-const counter = handleActions({
-  [INCREASE]: (state, action) => ({
-    number: state + 1,
-  }),
-  [DECREASE]: (state, action) => ({
-    number: state - 1,
-  }),
-})
+const counter = handleActions(
+  {
+    [INCREASE]: (state, action) => ({
+      number: state + 1,
+    }),
+    [DECREASE]: (state, action) => ({
+      number: state - 1,
+    }),
+  },
+  initialState,
+)
 
 export default counter
