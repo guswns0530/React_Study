@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { legacy_createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from './modules'
+import { legacy_createStore } from 'redux'
 
-const store = legacy_createStore(rootReducer, composeWithDevTools)
-
-console.log(store.getState())
+const store = legacy_createStore(rootReducer, composeWithDevTools())
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
