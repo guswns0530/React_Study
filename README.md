@@ -7,10 +7,19 @@
 fix v16 -> v18
 
 ### `hello world`
+
 ### `todo-app`
+
 ### `immer-tutorial`
+
 ### `router-tutorial`
+
 ### `news-viewer`
+
 ### `context-tutorial`
 
+### `vanilla-redux`
 
+### `react-redux-tutorial`
+
+### `react-redux-middleware`
