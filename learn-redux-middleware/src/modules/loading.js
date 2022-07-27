@@ -13,18 +13,21 @@ export const finishLoading = createAction(
   (requestType) => requestType
 );
 
-const initialState = [];
+const initialState = {};
 
-const loading = handleActions({
-  [START_LOADING]: (state, action) => ({
-    ...state,
-    [action.payload]: true,
-  }),
-  [FINISH_LOADING]: (state, action) => ({
-    ...state,
-    [action.payload]: false,
-  }),
-  initialState,
-});
+const loading = handleActions(
+  {
+    [START_LOADING]: (state, action) => ({
+      ...state,
+      [action.payload]: true,
+    }),
+    [FINISH_LOADING]: (state, action) => ({
+      ...state,
+      [action.payload]: false,
+    }),
+    initialState,
+  },
+  initialState
+);
 
 export default loading;
