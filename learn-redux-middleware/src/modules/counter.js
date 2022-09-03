@@ -6,19 +6,7 @@ const DECREASE = "counter/DECREASE";
 export const increase = createAction(INCREASE);
 export const decrease = createAction(DECREASE);
 
-// Thunk 생성 함수 일반 액션 객체를 반환하는 대신에 함수를 반환함
-export const increaseAsync = () => (dispatch) => {
-  setTimeout(() => {
-    dispatch(increase());
-  }, 1000);
-};
-export const decreaseAsync = () => (dispatch) => {
-  setTimeout(() => {
-    dispatch(decrease());
-  }, 1000);
-};
-
-const initialState = 0; // 상태는 꼭 객체일 필요가 없다. 숫자도 작동함
+const initialState = 0;
 
 const counter = handleActions(
   {
@@ -27,5 +15,18 @@ const counter = handleActions(
   },
   initialState
 );
+
+export const increaseAsync = () => (dispatch) => {
+  console.log("실행");
+  setTimeout(() => {
+    dispatch(increase());
+  }, 1000);
+};
+export const decreaseAsync = () => (dispatch) => {
+  console.log("실행");
+  setTimeout(() => {
+    dispatch(decrease());
+  }, 1000);
+};
 
 export default counter;

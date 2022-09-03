@@ -13,17 +13,21 @@ const Sample = ({ loadingPost, loadingUsers, post, users }) => {
           </div>
         )}
       </section>
+
       <hr></hr>
+
       <section>
         <h1>사용자 목록</h1>
-        {loadingUsers && "로딩 중..."}
-        {!loadingUsers && users && (
+        {loadingUsers && "로딩중"}
+        {loadingUsers && users && (
           <ul>
-            {users.map((user) => (
-              <li key={user.id}>
-                {user.username} ({user.email})
-              </li>
-            ))}
+            {users.map((user) => {
+              return (
+                <li key={user.id}>
+                  {user.username} {user.email}
+                </li>
+              );
+            })}
           </ul>
         )}
       </section>

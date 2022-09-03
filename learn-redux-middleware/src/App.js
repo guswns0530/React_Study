@@ -1,8 +1,16 @@
-import "./App.css";
+import CounterContainer from "./containers/CounterContainer";
 import SampleContainer from "./containers/SampleContainer";
 
 function App() {
-  return <SampleContainer />;
+  return (
+    <>
+      <CounterContainer />;
+      <SampleContainer />
+    </>
+  );
 }
 
 export default App;
+
+// https://jsonplaceholder.typicode.com/posts/1
+// https://jsonplaceholder.typicode.com/users
