@@ -18,8 +18,8 @@ const Sample = ({ loadingPost, loadingUsers, post, users }) => {
 
       <section>
         <h1>사용자 목록</h1>
-        {loadingUsers && "로딩중"}
-        {loadingUsers && users && (
+        {loadingUsers && "로딩중..."}
+        {!loadingUsers && users && (
           <ul>
             {users.map((user) => {
               return (
