@@ -38,17 +38,4 @@ const counter = handleActions(
   initialState
 );
 
-// export const increaseAsync = () => (dispatch) => {
-//   console.log("실행");
-//   setTimeout(() => {
-//     dispatch(increase());
-//   }, 1000);
-// };
-// export const decreaseAsync = () => (dispatch) => {
-//   console.log("실행");
-//   setTimeout(() => {
-//     dispatch(decrease());
-//   }, 1000);
-// };
-
 export default counter;
